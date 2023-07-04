@@ -6,7 +6,12 @@ public class IPhone extends Phone implements PhoneConnection, PhoneMedia {
     }
 
     public void message() {
-        System.out.println("*text*");
+        System.out.println("Message from IPhone");
+    }
+
+    @Override
+    public void call() {
+        System.out.println("Calling from IPhone");
     }
 
     public void takePhoto() {
@@ -18,7 +23,7 @@ public class IPhone extends Phone implements PhoneConnection, PhoneMedia {
     }
 
     public String toString() {
-        return name + " - " + model + "\nMemory: " + memory + " gb | " + "Camera:" + camera + " items.";
+        return getName() + " - " + getModel() + "\nMemory: " + getMemory() + " gb | " + "Camera:" + getCamera() + " items.";
     }
 
 }

@@ -1,10 +1,10 @@
 package Task1;
 
 public abstract class Phone {
-    String name;
-    String model;
-    double camera;
-    int memory;
+    private String name;
+    private String model;
+    private double camera;
+    private int memory;
 
     Phone(String name, String model, int memory) {
         this.name = name;
@@ -16,15 +16,20 @@ public abstract class Phone {
         this(name, model, memory);
         this.camera = camera;
     }
-}
 
-interface PhoneConnection{
-    default void call(){
-        System.out.println("Calling..");
+    public String getName() {
+        return name;
     }
-    void message();
-}
-interface PhoneMedia {
-    void takePhoto();
-    void makeVideo();
+
+    public String getModel() {
+        return model;
+    }
+
+    public double getCamera() {
+        return camera;
+    }
+
+    public int getMemory() {
+        return memory;
+    }
 }

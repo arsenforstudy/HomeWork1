@@ -6,9 +6,15 @@ public class SamsungPhone extends Phone implements PhoneConnection {
     }
 
     public void message() {
-        System.out.println("*text*");
+        System.out.println("Message from Samsung");
     }
+
+    @Override
+    public void call() {
+        System.out.println("Calling from Samsung");
+    }
+
     public String toString(){
-        return name + " - " + model + "\nMemory: " + memory + " gb.";
+        return getName() + " - " + getModel() + "\nMemory: " + getMemory() + " gb.";
     }
 }
